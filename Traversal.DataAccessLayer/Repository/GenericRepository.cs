@@ -1,32 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Traversal.DataAccessLayer.Abstract;
+﻿using Traversal.DataAccessLayer.Abstract;
+using Traversal.DataAccessLayer.Concrete;
 
 namespace Traversal.DataAccessLayer.Repository
 {
-    class GenericRepository<T> : IGenericDal<T>
+    public class GenericRepository<T>: IGenericDal<T> where T : class
     {
         public void Delete(T t)
         {
-            throw new NotImplementedException();
+            using var c = new AppDbContext();
+            c.Remove(t);
+            c.SaveChanges();
         }
 
         public List<T> GetListAll()
         {
-            throw new NotImplementedException();
+            using var c = new AppDbContext();
+            return c.Set<T>().ToList();
         }
 
         public void Insert(T t)
         {
-            throw new NotImplementedException();
+            using var c = new AppDbContext();
+            c.Add(t);
+            c.SaveChanges();
         }
 
         public void Update(T t)
         {
-            throw new NotImplementedException();
+            using var c = new AppDbContext();
+            c.Update(t);
+            c.SaveChanges();
         }
     }
 }

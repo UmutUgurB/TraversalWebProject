@@ -4,7 +4,7 @@ using TraversalProject.DataAccessLayer.Abstract;
 
 namespace Traversal.DataAccessLayer.EntityFramework
 {
-   public class EfAboutDal : GenericRepository<About>, IAboutDal
+    public class EfGuideDal : GenericRepository<Guide>,IGuideDal
     {
     }
 }
