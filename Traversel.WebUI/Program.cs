@@ -25,4 +25,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-// Merhaba bir þeyler yazýyorum bakalým nasýl olacak.
+// Merhaba bir þeyler yazýyorum bakalým nasýl olacak.Yeniden Deneyelim.git
