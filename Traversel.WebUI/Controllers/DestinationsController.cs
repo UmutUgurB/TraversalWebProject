@@ -16,7 +16,8 @@ namespace Traversel.WebUI.Controllers
         [HttpGet]
         public IActionResult DestinationDetails(int id)
         {
-            return View();
+            var value = destinationManager.TGetTById(id);
+            return View(value);
         }
         [HttpPost]
         public IActionResult DestinationDetails(Destination destination)

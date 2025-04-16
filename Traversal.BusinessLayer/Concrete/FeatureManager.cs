@@ -23,6 +23,11 @@ namespace Traversal.BusinessLayer.Concrete
             return _featureDal.GetListAll();
         }
 
+        public Feature TGetTById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TInsert(Feature t)
         {
             throw new NotImplementedException();

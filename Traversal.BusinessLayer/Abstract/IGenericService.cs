@@ -6,5 +6,7 @@
         void TDelete(T t);
         void TUpdate(T t);
         List<T> TGetListAll();
+
+        T TGetTById(int id);
     }
 }

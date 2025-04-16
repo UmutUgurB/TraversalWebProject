@@ -23,6 +23,11 @@ namespace Traversal.BusinessLayer.Concrete
             return _testimonialDal.GetListAll();
         }
 
+        public Testimonial TGetTById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TInsert(Testimonial t)
         {
             throw new NotImplementedException();
