@@ -8,6 +8,8 @@
         public string CommentContent { get; set; }
         public bool CommentIsActive { get; set; }
 
+        public int DestinationID { get; set; }
+        public Destination Destination { get; set; }
 
     }
 }

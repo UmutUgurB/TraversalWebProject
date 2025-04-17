@@ -1,4 +1,5 @@
-﻿using Traversal.DataAccessLayer.Abstract;
+﻿using System.Linq.Expressions;
+using Traversal.DataAccessLayer.Abstract;
 using Traversal.DataAccessLayer.Concrete;
 
 namespace Traversal.DataAccessLayer.Repository
@@ -22,6 +23,12 @@ namespace Traversal.DataAccessLayer.Repository
         {
             using var c = new AppDbContext();
             return c.Set<T>().ToList();
+        }
+
+        public List<T> GetListByFilet(Expression<Func<T, bool>> filter)
+        {
+            using var c = new AppDbContext();
+            return c.Set<T>().Where(filter).ToList();
         }
 
         public void Insert(T t)

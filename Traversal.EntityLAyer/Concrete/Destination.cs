@@ -13,5 +13,6 @@
         public string Image2 { get; set; }
         public string LongDescription { get; set; }
         public bool DescriptionIsActive { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
