@@ -21,6 +21,7 @@ namespace Traversel.WebUI.Controllers
             comment.CommentIsActive = true;
             cm.TInsert(comment);
             return PartialView();
+            //test
         }
 
     }
