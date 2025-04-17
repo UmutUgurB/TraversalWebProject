@@ -31,7 +31,7 @@ namespace Traversal.BusinessLayer.Concrete
 
         public void TInsert(Comment t)
         {
-            throw new NotImplementedException();
+            _commentDal.Insert(t);
         }
         public List<Comment> TGetDestinationById(int id)
         {
